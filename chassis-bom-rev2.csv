@@ -1,0 +1,54 @@
+QTY,Part,VENDOR,VENDOR#,Manufacturer,MFN#,Description,NOTE
+1,Fan extension cables,Amazon,Noctua NA-SEC2,Noctua,NA-SEC2,Pre terminated fan extension cables 12 in,
+1,FGPA heatsink,Coolinnovations,4-101010P,Coolinnovations,4-101011P,"Splayed Design, Copper Heat Sink",Use adhesive to attach to marble
+2,Fan guard,Digi-Key,259-1623-ND,Sunon Fans,FG-4,FAN GUARD 40MM METAL,
+2,"FAN1, FAN2",Digi-Key,259-1844-ND,Sunon Fans,MF40201V1-1000U-G99,"12VDC Fan, 40 mm x 40 mm x 20mm",
+3,Spades for LED+Fuse,Digi-Key,314-AI-50207-ND,Mueller Electronics,AI-50207,"0.250"" (6.35mm) Quick Connect Female 18-22 AWG Crimp Connector Insulated",
+1,Thermal Epoxy,Digi-Key,473-8349TFM-50ML-ND,MG Chemicals,8349TFM-50ML,Thermal Epoxy for heatsink,Adhesive for heatsinks
+2,BLK Hook Up Wire,Digi-Key,5856/7BK005-ND,Alpha Wire,5856/7 BK005,HOOK-UP STRND 20AWG BLACK 100',Wire for internal power
+2,RED Hook Up Wire,Digi-Key,5856/7RD005-ND,Alpha Wire,5856/7 RD005,HOOK-UP STRND 20AWG RED 100',Wire for internal power
+1,Crimp Tool (Power Connector),Digi-Key,58614-1-ND,TE Application Tooling,58614-1,TOOL HAND CRIMPER 18-24AWG SIDE,
+1,Crimp Tool Die (Power Connector),Digi-Key,A100343-ND,TE Application Tooling,58614-2,"Tool Die Set For Rectangular Contacts, 18-24 AWG",
+2,J19 Pins,Digi-Key,A19991CT-ND,TE Connectivity ,640252-2,CONN SOCKET 18-24AWG CRIMP TIN,
+1,J19,Digi-Key,A24111-ND,TE Connectivity ,770849-2,CONN RCPT HSG 2POS 3.96MM,Marble power connector
+1,SW1,Digi-Key,EG1889-ND,E-Switch,RR3130ABLKBLKFS,SWITCH ROCKER SPST 10A 125V,
+1,F1,Digi-Key,F013-ND,Littlefuse,03420838H,FUSE HLDR CART 250V 20A PNL MNT,
+1,FUSE,Digi-Key,F1769-ND,Littelfuse Inc.,0313005.MXP,FUSE GLASS 5A 250VAC 3AB 3AG,
+1,Power Plug,Digi-Key,GSM60U12-P1J,Mean Well USA,1866-5524-ND,AC/DC WALL MOUNT ADAPTER 12V 54W,Wall wort
+2,2U Chassis Handles (comes with screws),Digi-Key,HM1269-ND,Hammond Manufacturing,1427Q,"HANDLE STL/CHROME MTG CTR 2.299""",Handles
+2,"JX-M1, JX-M2, 3 Pin Connector (Fan Cable)",Digi-Key,S9434-ND,Sullins Connector Solutions,SWH25X-NULC-S03-UU-BA,"3 Rectangular Connectors - Housings Receptacle Beige 0.100"" (2.54mm)",Fan connector
+6,3 Pin Connector Pins (Fan Cable),Digi-Key,S9473TR-ND,Sullins Connector Solutions,SWT25X-URTC-S01-UU-UU,Socket Contact Tin 20-26 AWG Crimp -,Fan connector pins
+1,Ethernet,Digikey,1195-3540-ND,HARTING,9454521504,CABLE MOD 8P8C JACK-PLUG 1.64',
+1,12 VDC LED,Digikey,350-4318-ND,Dialight,655-1203-104F,LED PANEL INDICATOR GREEN 12V,
+1,BNC to SMA Cable,Digikey,3985-PE3733LF-12-ND,Pasternack,3985-PE3733LF-12-ND,12 inch BNC to SMA internal chassis cable,
+1,Micro USB ,Firewire,RR-MCBR-EXTPM-12GX5,Firewire,RR-MCBR-EXTPM-12GX5,Right angle micro usb cable,
+8,LC Panelmount adapter,FS,FH-LCU-DXF-OM4,FS,FH-LCU-DXF-OM4,LC/UPC to LC/UPC Duplex OM4 Multimode SC Footprint Plastic Fiber Optic Adapter/Coupler with Flange,
+2,SFP breakout cable,FS,FMTPLCOM4,FS,FMTPLCOM4,1m (3ft) MTP® Female to 4 LC UPC Duplex 8 Fibers Type B Plenum (OFNP) OM4 50/125,
+2,QSFP Adapater,FS,QSFP-SR4-40G,FS,QSFP-SR4-40G,Generic QSFP-SR4-40G Compatible 40GBASE-SR4 QSFP+,
+16,nut for LC conenctors,McmasterCarr,90592A075,McmasterCarr,90592A075,"Steel Hex Nut Class 8, M2 x 0.4 mm Thread",LC connector
+8,"M4 Hex Nut, 100 Pack (fans)",McmasterCarr,90710A035,McmasterCarr,90710A035,"18-8 Stainless Steel Thin Hex Nut M4 x 0.7 mm Thread, DIN 439B, ISO 4035",For fans
+8,"Socket Head Screw M4 x 0.7 mm Thread, 30 mm Long (fans)",McmasterCarr,91292A130,McmasterCarr,91292A130,"18-8 Stainless Steel Socket Head Screw M4 x 0.7 mm Thread, 30 mm Long",For fans
+16,screw for LC connectors,McmasterCarr,92000A017,McmasterCarr,92000A017,"Passivated 18-8 Stainless Steel Pan Head Phillips Screws M2 x 0.4mm Thread, 10mm Long",LC connector
+15,M2.5x0.45 Pan Head Phillips Screws (Marble+Quartz),McmasterCarr,92000A105,McmasterCarr,92000A105,"Passivated 18-8 Stainless Steel Pan Head Phillips Screws M2.5 x 0.45mm Thread, 8mm Long",Marble
+16,"M4 Split Washer, 100 Pack (fans)",McmasterCarr,92148A160,McmasterCarr,92148A160,"18-8 Stainless Steel Split Lock Washer for M4 Screw Size, Standard, 4.4 mm ID",For fans
+4,Jack screw between Marble and Quartz,McmasterCarr,93655A096,McmasterCarr,93655A096,"Male-Female Threaded Hex Standoff 4.500 mm Hex, 10 mm Long, M2.5 x 0.45 mm Thread",
+1,Grounding wire,McmasterCarr,https://www.mcmaster.com/6981T6-6981T695/,McmasterCarr,6981T6,Grounding wire to connect chassis to GND bar 500ft,GND
+2,Grounding lug,McmasterCarr,https://www.mcmaster.com/7113K455/,McmasterCarr,7113K455,Ring terminal for GND 14-16 awg No10 screw,GND
+1,Grounding nut (chassis,McmasterCarr,https://www.mcmaster.com/91240A009/,McmasterCarr,91240A009,8-32 stainless steel nut,GND
+1,Grounding nut (GND bar),McmasterCarr,https://www.mcmaster.com/91240A411/,McmasterCarr,91240A411,10-32 stainless steel nut,GND
+1,Grounding Screw,McmasterCarr,https://www.mcmaster.com/92597A140/,McmasterCarr,92597A140,Grounding screw for GND bar 10-32 3/4in (pack of 25),GND
+3,19mm standoff for quartz,McmasterCarr,https://www.mcmaster.com/94868A173/,McmasterCarr,94868A173,19mm hex standoff 2.5M partially threaded,Quartz standoff
+4,Star washers,McmasterCarr,https://www.mcmaster.com/97775A521/,McmasterCarr,97775A521,Star washers for grounding chassis and bar,GND
+2,2.5M washers for Quartz standoffs,McmasterCarr,https://www.mcmaster.com/98689A111/,McmasterCarr,98689A111,Pack of 100 2.5M washers,Quartz standoff
+1,BNC,Newark,07H2407,LCOM,BA1087,"Adapter Coaxial Connector BNC Jack, Female Socket To BNC Jack, Female Socket 50 Ohms",
+1,PG1,Newark,94X0659,Cliff Electronic Components,FC681445,"DC Power Connector, Jack, 2.1 mm, Panel Mount, Solder",Power plug
+1,Fan Filter,PPCS,MDY-FF-PVC-4,PPCS,MDY-FF-PVC-4,Ultra Thin 0.45mm PVC Fan Dust Filter - 4cm,
+1,Marble Chassis,Protocase,,,,2U custom chassis frame built to house related components. Hardware Included.,Chassis Shell
+16,8-32 countersunk screw,Protocase Supplied,,,,,
+16,8-32 PemNut,Protocase Supplied,,,,,
+6,8-32 stud,Protocase Supplied,,,,,
+6,8-32 nut,Protocase Supplied,,,,,
+12,M2.5 PEM Standoffs 10mm,Protocase Supplied,,,,,
+2,M2.5 PEM Stanoffs 19mm,Protocase Supplied,,,,,
+1,Marble Board,Osprey DCS,,,,,
+1,Quartz Board,Osprey DCS,,,,,
