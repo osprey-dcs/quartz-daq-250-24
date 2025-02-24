@@ -13,6 +13,7 @@ Revision 2
 - Pre-built [firmware](firmware) images
 
 - Documents
+  - Quartz [DAQ-250-24](documentation/quartz-daq-250-24-datasheet.md) datasheet
   - [EPICS IOC Setup](documentation/ioc-setup.md)
   - New [System Setup](documentation/system-setup.md)
   - [Chassis Setup/Recovery](documentation/chassis-setup.md)

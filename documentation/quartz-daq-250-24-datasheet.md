@@ -3,7 +3,7 @@
 Osprey Quartz is a highly scalable EPICS native 24-bit 250KHz data acquisition system
 consisting of one or more 2U 19-inch rack mounted chassis.
 Each chassis can digitizer up to 32 channels connected through two standard DB37F connectors.
-The input scale is fixed to $+-10$ volts.
+The input scale is fixed to $\pm 10$ volts with per-channel selectable AC or DC coupling.
 
 Multiple chassis may be [connected together](system-setup.md#Topologies)
 which maintaining a common sample clock phase.
@@ -20,8 +20,8 @@ This permits synchronous sampling with a very high channel count[^maxchan].
 | Width | 19 Inch |
 | Depth | 400 mm |
 | Communication | 1Gbps Ethernet, RJ45 |
-| Power Input Voltage | 12 VDC to 2 contact DC barrel Jack[^acdc] |
-| Number of Analog channels | 32 (2x 16 pairs) |
+| Power Input Voltage | 12 VDC into 2 contact [DC barrel Jack](#PowerInput)[^acdc] |
+| Number of Analog channels | 32 per chassis |
 | Analog Input | 2x DB37-F |
 | Sample rates | 1K, 5K, 10K, 25K, 50K, 250K samples per second |
 | AC/DC coupling | selectable per-channel |
@@ -31,18 +31,19 @@ This permits synchronous sampling with a very high channel count[^maxchan].
 
 | Specification | Minimum | Maximum |
 | ---- | ---- | ---- |
-| Ambient Temperature | 0C | 40 C |
+| Ambient Temperature | 0 C | 40 C |
 | Ambient Humidity | | 90% non-condensing |
 | Power Input Voltage[^acdc] | 0V DC | 13 VDC |
 | Power Current | | 4A |
 | Analog Input abs. voltage[^analogabs] | -15 V | +15 V (DC coupled) |
-|                                       | -25 V | +25 V (AC coupled) |
+|                                       | -25 V | +25 V (AC coupled)[^analogabsac] |
 | Analog Input diff. voltage[^analogdiff] | -30 V | +30 V |
 | Pulse-per-second Input Voltage | -0.7 V | 5.5 V |
 
-[^acdc]: 120V AC/DC converter included
-[^analogabs]: Voltage applied to any DB37 pin with respect to chassis ground
-[^analogdiff]: Voltage difference between each pair of pins
+[^acdc]: 120V AC/DC converter included.
+[^analogabs]: Voltage applied to any DB37 pin with respect to chassis ground.
+[^analogabsac]: For frequencies less than the 16 Hz.
+[^analogdiff]: Voltage difference between each pair of pins.
 
 ## Performance
 
@@ -58,13 +59,15 @@ This permits synchronous sampling with a very high channel count[^maxchan].
 |                  | | |  2KHz @ 5Ksps |
 |                  | | |  400Hz @ 1Ksps |
 | Channel Cross-talk[^cross] | | | -94 dB |
-| Analog linearity | | | |
+| Gain Accuracy | | | 0.13 % |
 | Pass-band ripple | 0.1 dB | | |
 | Effective resolution | | 19 bits @ 250Ksps | |
 
-[^cross]: Worst case of 100KHz measured on an adjacent channel on same side of PCB sharing ADC chip.
+[^cross]: Worst case of 100KHz measured on an adjacent channel on same side of PCB, sharing the same ADC chip.
 
 ## Connectors
+
+<a name="PowerInput"></a>
 
 - Power Input.
 
