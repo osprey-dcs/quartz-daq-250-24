@@ -20,8 +20,8 @@ Below is the plot showing all channels data while running the test.
 ![](functional-testing/image1.png)
 
 The DC voltage was stepped from \-10V through 10V at approximately 10 sec intervals. This gave \~250 million samples per step of data.  
-The data was then analyzed to give an upper bound of linearity. The sample with the largest variance from the ideal count was collected and shown in the table below.  
-![][image2]
+The data was then analyzed to give an upper bound of linearity. The sample with the largest variance from the ideal count was collected and shown in the table linked below.  
+[google sheet link](https://docs.google.com/spreadsheets/d/1LSDJu8C6iC6pIeCDivs3sl-keTuAOCS9q5x6OPSTIlo/edit?usp=sharing)
 
 Without gain or zero calibration applied the upper bound on linearity for these 32 channels are below
 
@@ -87,17 +87,18 @@ Testing shows some crosstalk is noticeable between 10kHz-100kHz. Below 10kHz pot
 
 Sweeping frequency from 100Hz to 100kHz over 10 seconds  
 Channel 17 (channel with signal input):
-![](functional-testing/image3.gif)
+![](functional-testing/image3.gif)  
 Channel 18 (Adjacent Channel sharing ADC):  
-![](functional-testing/image4.gif)
+![](functional-testing/image4.gif)  
 Channel 16 (Adjacent Channel not sharing ADC):  
-![](functional-testing/image5.gif)
+![](functional-testing/image5.gif)  
 The following is some plots showing the worst case observed crosstalk  
-FFT PLOT of input @99.9kHz![](functional-testing/image6.png)
-FFT PLOT of adjacent channels @99.9kHz![](functional-testing/image7.png)
+FFT PLOT of input @99.9kHz  
+![](functional-testing/image6.png)  
+FFT PLOT of adjacent channels @99.9kHz![](functional-testing/image7.png)    
 
 Below is a plot displaying the relative magnitude of the cross alk between the input channel and some adjunct channels.The input was a single tone starting at 100kHz and then stepping down by 10kHz every few seconds down to 10kHz.  
-![](functional-testing/image8.png)
+![](functional-testing/image8.png)  
 The upper red trace is showing the magnitude of the channel where input is present  
 You can see there are 3 bands of channel magnitudes.  
 The upper of these bands are adjacent channels on the same ADC.  
@@ -121,9 +122,9 @@ Below is a table of results showing the worst case ratio seen at each of the sam
 
 Next a sweep is performed from 1Hz to 2kHz over 10 seconds, using 25kHz sampling  
 Ch17  
-![](functional-testing/image9.gif)
+![](functional-testing/image9.gif)  
 Ch18  
-![](functional-testing/image10.gif)
+![](functional-testing/image10.gif)  
 Measurement of crosstalk while running this sweep is at or better than 105dB, which isn’t discernible from any other non-input channel. The measurement is limited the board’s noise floor
 
 ### Conclusion
@@ -147,14 +148,13 @@ Unless otherwise noted testing parameters are as follows:
 The easiest way to show the effectiveness of the built-in antialias filter of the ADC is to sweep the input frequency up to the sample frequency and look for reflections in the FFT. Below are such plots at each of the 4 higher sample rates
 
 FFT of 100Hz \- 250kHz linear sweep over 10 seconds @ 250kHz sampling  
-![](functional-testing/image11.gif)
-
+![](functional-testing/image11.gif)   
 FFT of 100Hz \- 50kHz linear sweep over 10 seconds @ 50kHz sampling  
-![](functional-testing/image12.gif)
+![](functional-testing/image12.gif)    
 FFT of 100Hz \- 25kHz linear sweep over 10 seconds @ 25kHz sampling  
-![](functional-testing/image13.gif)
+![](functional-testing/image13.gif)  
 FFT of 10Hz \- 5kHz linear sweep over 25 seconds @ 5kHz sampling  
-![](functional-testing/image14.gif)
+![](functional-testing/image14.gif)  
 
 ### Conclusion
 
