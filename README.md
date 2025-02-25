@@ -14,6 +14,7 @@ Revision 2
 
 - Documents
   - Quartz [DAQ-250-24](documentation/quartz-daq-250-24-datasheet.md) datasheet
+  - Quartz bench testing [report](documentation/functional-testing.md)
   - [EPICS IOC Setup](documentation/ioc-setup.md)
   - New [System Setup](documentation/system-setup.md)
   - [Chassis Setup/Recovery](documentation/chassis-setup.md)
@@ -25,6 +26,6 @@ Revision 2
 - [Marble MMC](https://github.com/BerkeleyLab/Marble-MMC) firmware
 - [Marble bootloader](https://github.com/BerkeleyLab/Bedrock) firmware
   - [Alluvium](https://github.com/mdavidsaver/alluvium) remote flash chip access
-- [Quartz PCB]() schematic and artwork
-- [Quartz application]() firmware
+- [Quartz PCB](https://github.com/osprey-dcs/Quartz) schematic and artwork
+- [Quartz application](https://github.com/osprey-dcs/Quartz-firmware) firmware
 - [Interlock I/O PCB](https://github.com/osprey-dcs/pmod-mps-io)
