@@ -86,7 +86,7 @@ Unless otherwise noted testing parameters are as follows:
 Testing shows some crosstalk is noticeable between 10kHz-100kHz. Below 10kHz potential crosstalk is within the observed noise floor. Crosstalk is observed on physically adjacent channels that share the same digitizing ADC. Little to no crosstalk is seen on adject channels on a separate ADC.
 
 Sweeping frequency from 100Hz to 100kHz over 10 seconds  
-Channel 17 (channel with signal input):
+Channel 17 (channel with signal input):  
 ![](functional-testing/image3.gif)  
 Channel 18 (Adjacent Channel sharing ADC):  
 ![](functional-testing/image4.gif)  
@@ -95,7 +95,8 @@ Channel 16 (Adjacent Channel not sharing ADC):
 The following is some plots showing the worst case observed crosstalk  
 FFT PLOT of input @99.9kHz  
 ![](functional-testing/image6.png)  
-FFT PLOT of adjacent channels @99.9kHz![](functional-testing/image7.png)    
+FFT PLOT of adjacent channels @99.9kHz
+![](functional-testing/image7.png)    
 
 Below is a plot displaying the relative magnitude of the cross alk between the input channel and some adjunct channels.The input was a single tone starting at 100kHz and then stepping down by 10kHz every few seconds down to 10kHz.  
 ![](functional-testing/image8.png)  
