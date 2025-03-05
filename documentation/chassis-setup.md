@@ -281,3 +281,52 @@ $ ls -l /dev/bus/usb/001/005
 crw-rw---- 1 root plugdev 189, 4 Feb 15 08:39 /dev/bus/usb/001/005
 $ sudo chmod a+rw /dev/bus/usb/001/005
 ```
+
+## Quartz EEPROM
+
+The Quartz PCB includes an EEPROM which holds FMC meta-data,
+including manufacturer, product, and serial number in the
+[FRU](https://www.intel.com/content/www/us/en/servers/ipmi/information-storage-definition.html)
+(Field Replaceable Unit) format.
+
+The [frugy](https://pypi.org/project/frugy/) tool can produce EEPROM images
+using configuration file templates present in the
+[Quartz](https://github.com/osprey-dcs/Quartz/tree/quartz-1.x/Documentation/EEPROM) repository.
+
+```sh
+sudo apt-get install python3-virtualenv atftp
+
+git clone --branch quartz-1.x https://github.com/osprey-dcs/Quartz
+cd Documentation/EEPROM
+
+virtualenv /tmp/fruenv
+. /tmp/fruenv/bin/activate
+pip install frugy
+```
+
+Now edit `Documentation/EEPROM/createEEPROMs.sh` to set a range of serial numbers.
+
+```sh
+./createEEPROMs.sh
+```
+
+This will produce a set of files with names like `EEPROM_010.bin` (base 10 numbering),
+which are then loaded through the application firmware via. TFTP.
+
+When writing the EEPROM, the J6 jumper on Quartz must be **closed/shorted**.
+
+The current contents may be read with:
+
+```sh
+atftp --get -l EEPROM_rb.bin -r FMC1_EEPROM.bin
+```
+
+And written with:
+
+```sh
+atftp --put -l EEPROM_010.bin -r FMC1_EEPROM.bin
+atftp --get -l EEPROM_rb.bin -r FMC1_EEPROM.bin
+diff EEPROM_010.bin EEPROM_rb.bin
+```
+
+It is strongly recommended to always read back and compare after writing to the EEPROM.
