@@ -144,6 +144,8 @@ CR1 0b00100100 [lc1   , lc0   , TBPROT, dnu, bpnv  , TBPARM, quad  , freeze]
 
 ## Re-program Flash Chip
 
+**Do not perform the following unless specifically directed to do so.**
+
 ## Overwrite FPGA bootloader image
 
 As shipped, the 16MB flash chip on a Marble is partitioned into two 8MB sections
