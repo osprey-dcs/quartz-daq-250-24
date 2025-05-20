@@ -292,7 +292,7 @@ including manufacturer, product, and serial number in the
 (Field Replaceable Unit) format.
 
 The [frugy](https://pypi.org/project/frugy/) tool can produce EEPROM images
-using configuration file templates present in the
+using configuration files present in the
 [Quartz](https://github.com/osprey-dcs/Quartz/tree/quartz-1.x/Documentation/EEPROM) repository.
 
 ```sh
@@ -306,28 +306,27 @@ virtualenv /tmp/fruenv
 pip install frugy
 ```
 
-Now edit `Documentation/EEPROM/createEEPROMs.sh` to set a range of serial numbers.
+Now create EEPROM image, and attempt to program and verify, serial number 256 (IP address `192.168.79.256`).
+
+Substitute actual board variant and serial number.
 
 ```sh
-./createEEPROMs.sh
+./createEEPROM.sh QuartzEEPROM-v1.2.2.yml 256
 ```
-
-This will produce a set of files with names like `EEPROM_010.bin` (base 10 numbering),
-which are then loaded through the application firmware via. TFTP.
 
 When writing the EEPROM, the J6 jumper on Quartz must be **closed/shorted**.
 
 The current contents may be read with:
 
 ```sh
-atftp --get -l EEPROM_rb.bin -r FMC1_EEPROM.bin
+atftp --get -l EEPROM_rb.bin -r FMC1_EEPROM.bin 192.168.79.256
 ```
 
-And written with:
+And manually written confirmed with:
 
 ```sh
-atftp --put -l EEPROM_010.bin -r FMC1_EEPROM.bin
-atftp --get -l EEPROM_rb.bin -r FMC1_EEPROM.bin
+atftp --put -l EEPROM_010.bin -r FMC1_EEPROM.bin 192.168.79.256
+atftp --get -l EEPROM_rb.bin -r FMC1_EEPROM.bin 192.168.79.256
 diff EEPROM_010.bin EEPROM_rb.bin
 ```
 
