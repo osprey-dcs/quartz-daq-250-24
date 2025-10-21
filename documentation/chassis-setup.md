@@ -8,7 +8,7 @@ This process consists of the following tasks:
 
 1. Update application firmware
 1. Set IP and MAC addresses
-1. Completely reprogram flash chip
+1. Completely reprogram flash chip (not recommended for end user)
 
 ## Prerequisites
 
@@ -69,7 +69,7 @@ then they will appear as ttyUSB1 through ttyUSB3.
 Assuming enumeration as 0 through 3, access the MMC console.
 
 ```sh
-$ python -m serial /dev/ttyUSB3 115200
+$ python -m serial.tools.miniterm /dev/ttyUSB3 115200
 --- Miniterm on /dev/ttyUSB3  115200,8,N,1 ---
 --- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
 ```
@@ -105,6 +105,11 @@ eg. for Marble S/N 8.
 m 192.168.79.8
 n 12:55:55:00:1f:08
 ```
+
+Note: there is no setting for network mask (netmask) or default gateway through the MMC console
+as these are not necessary for LEEP traffic (device only replies to sender).
+Network mask and gateway are separately configured for the Quartz application fireware,
+for use by the NTP client.
 
 ### Verify Communication
 

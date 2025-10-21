@@ -16,15 +16,15 @@ to communicate with a Quartz ADC chassis
 
 ```sh
 sudo apt-get update
-sudo apt-get install -y build-essential git libevent-dev libz-dev libfftw3-dev libreadline-dev python3 python-is-python3
+sudo apt-get install -y build-essential git libevent-dev libz-dev libfftw3-dev libreadline-dev python3 python3-serial python-is-python3
 ```
 
 ```sh
 git clone --branch 7.0 https://github.com/epics-base/epics-base
 git clone --branch master https://github.com/epics-base/pvxs
 git clone --branch master https://github.com/epics-modules/autosave
-git clone --branch atf-dev https://github.com/osprey-dcs/feed-core
-git clone --branch atf-dev https://github.com/osprey-dcs/pscdrv
+git clone --branch master https://github.com/osprey-dcs/feed-core
+git clone --branch master https://github.com/osprey-dcs/pscdrv
 git clone --branch main https://github.com/osprey-dcs/atf-acq-ioc
 git clone https://github.com/mdavidsaver/alluvium
 
@@ -109,6 +109,18 @@ FDAS:01:GLD:FW_CODEHASH
 FDAS:01:APP:FW_CODEHASH 19d434014ec88c9652fc332fa56cfe995219bbe4
 ```
 
+### Alternative boot
+
+The alluvium tool can be used to boot to the application firmware separately from the IOC.
+
+```sh
+$ python3 -m alluvium 192.168.79.8 clear
+SR1 0b10011000 [SRWD  , p_err , e_err , BP2   , BP1   , bp0   , wel   , wip   ]
+SR2 0b00000000 [es   , ps   ]
+CR1 0b00100100 [lc1   , lc0   , TBPROT, dnu, bpnv  , TBPARM, quad  , freeze]
+$ python3 -m alluvium 192.168.79.8 reboot app
+```
+
 ## FPGA Application Console
 
 The `atf-acq-ioc/scripts/console.py` script allows communication with
@@ -153,9 +165,33 @@ FMC1 EEPROM at 0x54:
 Boot flash write protected.
 ```
 
-Since the `IPv4 NTP server` is set, this node is configured as a master/EVG node.
+Query current IP configuration
+
+```
+gw
+ IPv4 netmask: 255.255.255.0
+ IPv4 gateway: 192.168.79.1
+ntp
+ IPv4 NTP server: 192.168.79.99
+```
+
+Use the `gw` and `ntp` commands configure the NTP server address (**node 1/EVG only**),
+netmask, and default gateway.
+
+For a EVG node:
+
+```
+ntp 192.168.79.99 255.255.255.0
+```
+
+For all other nodes:
+
+```
+ntp 0.0.0.0 255.255.255.0
+```
+
 To clear issue `ntp 0.0.0.0`.
-To set issue eg. `ntp 192.168.79.99`.
+If the netmask is omitted, then `255.255.255.0` is used.
 Acknowledge and reboot (power cycle or issue `boot` command)
 
 When configured as a master/EVG, the node will attempt to contact the NTP server on startup.

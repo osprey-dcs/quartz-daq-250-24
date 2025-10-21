@@ -14,11 +14,13 @@ Revision 2
 
 - Documents
   - Quartz [DAQ-250-24](documentation/quartz-daq-250-24-datasheet.md) datasheet
-  - Quartz bench testing [report](documentation/functional-testing.md)
+  - **[Quick-start](documentation/quick-start.md)** Guide
   - [EPICS IOC Setup](documentation/ioc-setup.md)
   - New [System Setup](documentation/system-setup.md)
   - [Chassis Setup/Recovery](documentation/chassis-setup.md)
   - [New Marble PCB](documentation/marble-bring-up-procedure.pdf) one-time factory bring-up process
+  - Quartz bench testing [report](documentation/functional-testing.md)
+  - Notes for [RHEL](documentation/rhel-notes.md) derivatives
 
 ## Related
 
