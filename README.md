@@ -16,6 +16,7 @@ Revision 2
   - Quartz [DAQ-250-24](documentation/quartz-daq-250-24-datasheet.md) datasheet
   - **[Quick-start](documentation/quick-start.md)** Guide
   - [EPICS IOC Setup](documentation/ioc-setup.md)
+  - [Acquisition Engine](documentation/acquire.md) setup
   - New [System Setup](documentation/system-setup.md)
   - [Chassis Setup/Recovery](documentation/chassis-setup.md)
   - [New Marble PCB](documentation/marble-bring-up-procedure.pdf) one-time factory bring-up process

@@ -56,7 +56,6 @@ PSCDRV=\$(TOP)/../pscdrv
 EPICS_BASE=\$(TOP)/../epics-base
 EOF
 
-# replace '10' with number of CPUs
 make -C epics-base
 make -C autosave
 make -C pvxs
