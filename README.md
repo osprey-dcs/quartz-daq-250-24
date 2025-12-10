@@ -22,6 +22,7 @@ Revision 2
   - [New Marble PCB](documentation/marble-bring-up-procedure.pdf) one-time factory bring-up process
   - Quartz bench testing [report](documentation/functional-testing.md)
   - Notes for [RHEL](documentation/rhel-notes.md) derivatives
+  - Quartz [file format](https://github.com/osprey-dcs/atf-previewer/blob/main/documentation/file-formats.md)
 
 ## Related
 
