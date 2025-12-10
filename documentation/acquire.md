@@ -86,6 +86,7 @@ ExecStart=/usr/local/epics/usr/bin/procServ \
   -P unix:%t/atf-engine/control \
   -P 10100 \
   /path/to/env/bin/python -m atf_engine \
+  --prefix FDAS: \
   --root /data
 ```
 
@@ -96,3 +97,19 @@ ExecStart=/usr/local/epics/usr/bin/procServ \
 ```
 
 ## quartz-config-loader
+
+An example systemd `quartz-config-loader/quartz-config-loader.service` is provided.
+In the following `/path/to/env/bin/python` may need to be adjusted,
+also `--prefix MDAS:`.
+
+```systemd
+[Service]
+ExecStart=/usr/local/epics/usr/bin/procServ \
+  --foreground --logfile - --name cccr \
+  --chdir /opt/quartz-config-loader \
+  --info-file %t/%n/info \
+  --port 0 \
+  --port unix:%t/%n/control \
+  /path/to/env/bin/python -m cccr_configurer.server \
+    --prefix MDAS:
+```
