@@ -87,6 +87,7 @@ ExecStart=/usr/local/epics/usr/bin/procServ \
   -P 10100 \
   /path/to/env/bin/python -m atf_engine \
   --prefix FDAS: \
+  --num-chassis 32 \
   --root /data
 ```
 
