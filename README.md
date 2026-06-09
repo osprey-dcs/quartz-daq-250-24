@@ -5,6 +5,8 @@ distributed ADC chassis.
 
 Revision 2
 
+![Front panel](documentation/quartz-front.jpg)
+
 ## Contents
 
 - [3D model](chassis-rev2.stp.xz) of 2U Chassis, including Marble and Quartz PCBs
@@ -33,3 +35,5 @@ Revision 2
 - [Quartz PCB](https://github.com/osprey-dcs/Quartz) schematic and artwork
 - [Quartz application](https://github.com/osprey-dcs/Quartz-firmware) firmware
 - [Interlock I/O PCB](https://github.com/osprey-dcs/pmod-mps-io)
+
+![Installation](documentation/quartz-rack.jpg)
